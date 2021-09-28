@@ -414,8 +414,9 @@ def SendMailIT(logfile):
     body = (" Bonjour, \n\nVous trouverez dans ce mail le logger d'audit \n"
     "\n" 
     "Chemin des logs du script %s" % (log_path2))
-    receiver_email = "quentin.gautier33@gmail.com" # TODO enlever mon mail perso ou l'obfuscer
+   
     sender_email = "aic.ssi.p6@gmail.com" # crée pour le projet
+    receiver_email = sender_email
     
     msg = EmailMessage()
     msg["From"] = sender_email
