@@ -1,0 +1,88 @@
+2021-09-28 19:38:50,831 :: INFO :: Début du script d'audit
+
+2021-09-28 19:38:57,554 :: INFO :: Option choisi : -s
+
+2021-09-28 19:38:57,555 :: INFO :: Le script s'éxécutera sur ubuntu
+
+2021-09-28 19:38:57,556 :: INFO :: Ping ubuntu OK
+
+2021-09-28 19:38:57,557 :: INFO :: Récupération Infos venant de ubuntu
+
+2021-09-28 19:38:58,064 :: INFO :: OS de la machine :  Ubuntu 20.04.3 LTS
+
+2021-09-28 19:38:58,064 :: INFO :: Kernel de la machine : 5.11.0-34-generic
+
+2021-09-28 19:38:58,064 :: INFO :: Récupération du dernier kernel pour :  Ubuntu 20.04.3 LTS
+
+2021-09-28 19:38:58,066 :: DEBUG :: Starting new HTTPS connection (1): packages.ubuntu.com:443
+
+2021-09-28 19:38:58,190 :: DEBUG :: https://packages.ubuntu.com:443 "GET /focal/kernel/ HTTP/1.1" 200 None
+
+2021-09-28 19:38:58,238 :: INFO :: Requete Web OK
+
+2021-09-28 19:38:58,248 :: INFO :: Compare des deux kernel en cours
+
+2021-09-28 19:38:58,248 :: WARNING :: La machine n'est pas à jour
+
+2021-09-28 19:38:58,248 :: INFO :: Récupération Users sur : ubuntu
+
+2021-09-28 19:38:58,515 :: INFO :: Début de l'analyse de l'history user
+
+2021-09-28 19:38:58,515 :: INFO :: Les commandes dangereuses sont : ['sudo', 'remove', 'upgrade', 'rm', 'rmdir', 'apt', '*.sh']
+
+2021-09-28 19:38:58,515 :: INFO :: Exclusion de l'analyse pour syslog
+
+2021-09-28 19:38:58,515 :: INFO :: Exclusion de l'analyse pour cups-pk-helper
+
+2021-09-28 19:38:58,515 :: INFO :: Exclusion de l'analyse pour admaic
+
+2021-09-28 19:38:58,515 :: INFO :: Analyse History pour l'utilisateur julie sur ubuntu
+
+2021-09-28 19:38:58,792 :: WARNING :: commande dangereuse rm pour julie sur : ubuntu
+
+2021-09-28 19:38:58,792 :: WARNING :: commande dangereuse rmdir pour julie sur : ubuntu
+
+2021-09-28 19:38:58,792 :: WARNING :: commande dangereuse remove pour julie sur : ubuntu
+
+2021-09-28 19:38:58,792 :: WARNING :: commande dangereuse apt pour julie sur : ubuntu
+
+2021-09-28 19:38:58,792 :: INFO :: Analyse History pour l'utilisateur jp sur ubuntu
+
+2021-09-28 19:39:05,147 :: INFO :: Audit en cours par dictionnaire
+
+2021-09-28 19:39:05,147 :: INFO :: Début l'analyse de compléxité des mot de passe
+
+2021-09-28 19:39:05,147 :: INFO :: Exclusion de l'utilisateur syslog pour analyse password
+
+2021-09-28 19:39:05,147 :: INFO :: Exclusion de l'utilisateur cups-pk-helper pour analyse password
+
+2021-09-28 19:39:05,147 :: INFO :: Exclusion de l'utilisateur admaic pour analyse password
+
+2021-09-28 19:39:05,416 :: INFO :: Récupération shadow OK
+
+2021-09-28 19:39:05,417 :: INFO :: Création fichier temporaire OK pour stocker le /etc/shadow
+
+2021-09-28 19:39:07,259 :: INFO :: Les mot de passes n'apparaitront ni dans la console ni dans le logger
+
+2021-09-28 19:39:07,259 :: INFO :: Utilisation dictionnaire password.lst
+
+2021-09-28 19:39:07,275 :: INFO :: Déchiffrement mot de passe OK
+
+2021-09-28 19:39:07,275 :: INFO :: Constitution d'une liste en cours
+
+2021-09-28 19:39:07,275 :: INFO :: Analyse Pass pour : julie 
+
+2021-09-28 19:39:07,275 :: WARNING :: Mot de passe faible pour : julie
+
+2021-09-28 19:39:07,596 :: INFO :: Mail envoyé à l'utilisateur julie 
+
+2021-09-28 19:39:07,596 :: INFO :: Analyse Pass pour : jp 
+
+2021-09-28 19:39:07,596 :: WARNING :: Mot de passe faible pour : jp
+
+2021-09-28 19:39:07,896 :: INFO :: Mail envoyé à l'utilisateur jp 
+
+2021-09-28 19:39:07,897 :: INFO :: Suppression du fichier temporaire OK
+
+2021-09-28 19:39:07,897 :: INFO :: Close du logger pour sendmail
+
